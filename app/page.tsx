@@ -16,7 +16,6 @@ export default async function Home() {
       <ProfileCard {...data} />
       <div className="flex flex-col gap-10 w-4/5">
         <Bio />
-        <Techs />
         <Projects />
       </div>
     </main>

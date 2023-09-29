@@ -9,6 +9,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from './ui/button';
 import { SendIcon } from 'lucide-react';
+import { ModeToggle } from './mode-toggle';
 
 type ProfileCardProps = {
   avatar_url: string;
@@ -27,7 +28,8 @@ export function ProfileCard({
   bio,
 }: ProfileCardProps) {
   return (
-    <Card className="w-1/5 h-full">
+    <Card className="w-1/5 h-full relative">
+      <ModeToggle />
       <CardHeader>
         <CardTitle>{name}</CardTitle>
         <CardDescription>{login}</CardDescription>
