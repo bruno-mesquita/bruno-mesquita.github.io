@@ -6,47 +6,58 @@
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-heading: 'Jost', ui-sans-serif, system-ui, sans-serif;
-  --radius: 0.5rem;
 
-  --color-background: oklch(0.985 0 0);
-  --color-foreground: oklch(0.145 0 0);
-  --color-card: oklch(1 0 0);
-  --color-card-foreground: oklch(0.145 0 0);
-  --color-border: oklch(0.922 0 0);
-  --color-input: oklch(0.922 0 0);
-  --color-muted: oklch(0.97 0 0);
-  --color-muted-foreground: oklch(0.556 0 0);
-  --color-primary: oklch(0.205 0 0);
-  --color-primary-foreground: oklch(0.985 0 0);
-  --color-secondary: oklch(0.97 0 0);
-  --color-secondary-foreground: oklch(0.205 0 0);
-  --color-accent: oklch(0.645 0.186 200);
-  --color-accent-foreground: oklch(0.985 0 0);
+  /* Radius maior — estilo clean/moderno */
+  --radius: 0.75rem;
+
+  /* ── Light mode — off-white quente, não zinc frio ── */
+  --color-background: oklch(0.98 0.004 80);          /* quase branco levemente quente */
+  --color-foreground: oklch(0.18 0.01 260);          /* quase preto com tom slate */
+  --color-card: oklch(1 0 0);                        /* branco puro */
+  --color-card-foreground: oklch(0.18 0.01 260);
+  --color-border: oklch(0.90 0.008 260);             /* cinza azulado suave */
+  --color-input: oklch(0.93 0.006 260);
+  --color-muted: oklch(0.95 0.006 260);              /* fundo de seções alternadas */
+  --color-muted-foreground: oklch(0.52 0.02 260);
+  --color-primary: oklch(0.55 0.24 270);             /* índigo principal */
+  --color-primary-foreground: oklch(0.99 0 0);
+  --color-secondary: oklch(0.93 0.03 270);           /* índigo muito claro */
+  --color-secondary-foreground: oklch(0.40 0.18 270);
+  --color-accent: oklch(0.55 0.24 270);              /* índigo — identidade visual */
+  --color-accent-foreground: oklch(0.99 0 0);
   --color-destructive: oklch(0.577 0.245 27.325);
-  --color-ring: oklch(0.708 0 0);
+  --color-ring: oklch(0.55 0.24 270);                /* focus ring índigo */
   --color-popover: oklch(1 0 0);
-  --color-popover-foreground: oklch(0.145 0 0);
+  --color-popover-foreground: oklch(0.18 0.01 260);
+
+  /* Sombras — usadas em cards */
+  --shadow-sm: 0 1px 3px oklch(0.18 0.01 260 / 0.06), 0 1px 2px oklch(0.18 0.01 260 / 0.04);
+  --shadow-md: 0 4px 12px oklch(0.18 0.01 260 / 0.08), 0 2px 4px oklch(0.18 0.01 260 / 0.04);
 }
 
 .dark {
-  --color-background: oklch(0.145 0 0);
-  --color-foreground: oklch(0.985 0 0);
-  --color-card: oklch(0.205 0 0);
-  --color-card-foreground: oklch(0.985 0 0);
-  --color-border: oklch(0.269 0 0);
-  --color-input: oklch(0.269 0 0);
-  --color-muted: oklch(0.269 0 0);
-  --color-muted-foreground: oklch(0.708 0 0);
-  --color-primary: oklch(0.985 0 0);
-  --color-primary-foreground: oklch(0.205 0 0);
-  --color-secondary: oklch(0.269 0 0);
-  --color-secondary-foreground: oklch(0.985 0 0);
-  --color-accent: oklch(0.645 0.186 200);
-  --color-accent-foreground: oklch(0.985 0 0);
+  /* ── Dark mode — slate azulado, não zinc neutro ── */
+  --color-background: oklch(0.14 0.02 260);          /* slate muito escuro */
+  --color-foreground: oklch(0.94 0.008 260);         /* branco levemente frio */
+  --color-card: oklch(0.19 0.02 260);                /* slate escuro para cards */
+  --color-card-foreground: oklch(0.94 0.008 260);
+  --color-border: oklch(0.28 0.025 265);             /* borda slate médio */
+  --color-input: oklch(0.28 0.025 265);
+  --color-muted: oklch(0.22 0.022 262);              /* seções alternadas */
+  --color-muted-foreground: oklch(0.65 0.02 260);
+  --color-primary: oklch(0.65 0.22 268);             /* índigo mais claro no dark */
+  --color-primary-foreground: oklch(0.12 0.02 260);
+  --color-secondary: oklch(0.26 0.04 268);           /* índigo escuro */
+  --color-secondary-foreground: oklch(0.85 0.05 268);
+  --color-accent: oklch(0.65 0.22 268);              /* índigo no dark */
+  --color-accent-foreground: oklch(0.12 0.02 260);
   --color-destructive: oklch(0.704 0.191 22.216);
-  --color-ring: oklch(0.439 0 0);
-  --color-popover: oklch(0.205 0 0);
-  --color-popover-foreground: oklch(0.985 0 0);
+  --color-ring: oklch(0.65 0.22 268);
+  --color-popover: oklch(0.19 0.02 260);
+  --color-popover-foreground: oklch(0.94 0.008 260);
+
+  --shadow-sm: 0 1px 3px oklch(0 0 0 / 0.25), 0 1px 2px oklch(0 0 0 / 0.15);
+  --shadow-md: 0 4px 12px oklch(0 0 0 / 0.35), 0 2px 4px oklch(0 0 0 / 0.2);
 }
 
 @layer base {

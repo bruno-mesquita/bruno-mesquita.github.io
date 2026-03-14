@@ -17,7 +17,7 @@ export function Contact() {
           >
             <div
               className="p-3 rounded-lg"
-              style={{ backgroundColor: 'oklch(0.645 0.186 200 / 0.1)' }}
+              style={{ backgroundColor: 'oklch(0.55 0.24 270 / 0.1)' }}
             >
               <Mail className="h-5 w-5" style={{ color: 'var(--color-accent)' }} />
             </div>
@@ -35,7 +35,7 @@ export function Contact() {
           >
             <div
               className="p-3 rounded-lg"
-              style={{ backgroundColor: 'oklch(0.645 0.186 200 / 0.1)' }}
+              style={{ backgroundColor: 'oklch(0.55 0.24 270 / 0.1)' }}
             >
               <Linkedin className="h-5 w-5" style={{ color: 'var(--color-accent)' }} />
             </div>
@@ -52,7 +52,7 @@ export function Contact() {
           >
             <div
               className="p-3 rounded-lg"
-              style={{ backgroundColor: 'oklch(0.645 0.186 200 / 0.1)' }}
+              style={{ backgroundColor: 'oklch(0.55 0.24 270 / 0.1)' }}
             >
               <svg
                 viewBox="0 0 24 24"
