@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { Github, Linkedin, Mail } from 'lucide-react'
@@ -19,6 +20,17 @@ export function Hero() {
       />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-32 text-center">
+        <div className="flex justify-center mb-6">
+          <Image
+            src="https://github.com/bruno-mesquita.png"
+            alt="Bruno Mesquita"
+            width={80}
+            height={80}
+            className="rounded-full ring-2 ring-border"
+            priority
+          />
+        </div>
+
         <p
           className="text-sm font-mono mb-4 tracking-widest uppercase"
           style={{ color: 'var(--color-accent)' }}
