@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, sou",
+    "role": "Desenvolvedor Fullstack JS/TS",
+    "subtitle": "Construindo produtos digitais com Node.js, React e React Native há 6+ anos.",
+    "cta_github": "GitHub",
+    "cta_linkedin": "LinkedIn",
+    "cta_contact": "Contato"
+  },
+  "about": {
+    "title": "Sobre mim",
+    "bio1": "Sou desenvolvedor fullstack com mais de 6 anos de experiência criando produtos digitais robustos e escaláveis. Atualmente trabalho na Waac - Soluções Tecnológicas, em São José dos Campos - SP.",
+    "bio2": "Tenho expertise em TypeScript/JavaScript em todas as camadas da aplicação: APIs REST com Node.js e NestJS, frontends modernos com React e Next.js, e apps mobile com React Native. Também trabalho com mensageria (Kafka) e cloud (AWS).",
+    "stat_years": "Anos de experiência",
+    "stat_projects": "Projetos entregues",
+    "stat_company": "Empresa atual"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "categories": {
+      "languages": "Linguagens",
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "mobile": "Mobile",
+      "cloud": "Cloud & Infra",
+      "databases": "Banco de dados"
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "filter_all": "Todos",
+    "filter_marketplace": "Marketplace",
+    "filter_mobile": "Mobile",
+    "filter_fullstack": "Fullstack",
+    "filter_company": "Empresa",
+    "filter_clone": "Clone",
+    "badge_private": "Privado",
+    "badge_in_progress": "Em desenvolvimento",
+    "btn_code": "Código",
+    "btn_live": "Ver site",
+    "btn_unavailable": "Repositório privado"
+  },
+  "contact": {
+    "title": "Contato",
+    "subtitle": "Disponível para projetos freelance e oportunidades.",
+    "email_label": "Email",
+    "linkedin_label": "LinkedIn",
+    "location": "São José dos Campos - SP, Brasil"
+  }
+}
