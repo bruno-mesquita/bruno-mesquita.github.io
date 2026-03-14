@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl'
-import { Mail, Linkedin, MapPin } from 'lucide-react'
+import { Mail, Linkedin, MapPin, MessageCircle } from 'lucide-react'
 
 export function Contact() {
   const t = useTranslations('contact')
@@ -10,7 +10,7 @@ export function Contact() {
         <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('title')}</h2>
         <p className="text-muted-foreground mb-12">{t('subtitle')}</p>
 
-        <div className="grid sm:grid-cols-2 gap-4 mb-8">
+        <div className="grid sm:grid-cols-3 gap-4 mb-8">
           <a
             href="mailto:bmesquita196@gmail.com"
             className="flex items-center gap-4 p-6 rounded-xl border border-border bg-card hover:border-accent/50 transition-all text-left group"
@@ -42,6 +42,23 @@ export function Contact() {
             <div>
               <p className="text-xs text-muted-foreground mb-1">{t('linkedin_label')}</p>
               <p className="text-sm font-medium">linkedin.com/in/brunomesquita196</p>
+            </div>
+          </a>
+          <a
+            href="https://wa.me/5512981315901"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 p-6 rounded-xl border border-border bg-card hover:border-accent/50 transition-all text-left group"
+          >
+            <div
+              className="p-3 rounded-lg"
+              style={{ backgroundColor: 'oklch(0.645 0.186 200 / 0.1)' }}
+            >
+              <MessageCircle className="h-5 w-5" style={{ color: 'var(--color-accent)' }} />
+            </div>
+            <div>
+              <p className="text-xs text-muted-foreground mb-1">{t('whatsapp_label')}</p>
+              <p className="text-sm font-medium">+55 (12) 98131-5901</p>
             </div>
           </a>
         </div>
