@@ -46,7 +46,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`${inter.variable} ${jost.variable}`}
+      className={`${inter.variable} ${jost.variable} scroll-smooth`}
     >
       <body>
         <ThemeProvider
