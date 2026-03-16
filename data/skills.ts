@@ -13,7 +13,7 @@ export const skillCategories: SkillCategory[] = [
   {
     id: 'backend',
     icon: 'Server',
-    skills: ['Node.js', 'NestJS', 'Express', 'Deno', 'Fresh', 'Kafka', 'REST API'],
+    skills: ['Node.js', 'NestJS', 'Express', 'Deno', 'Fresh', 'REST API'],
   },
   {
     id: 'frontend',
@@ -28,7 +28,7 @@ export const skillCategories: SkillCategory[] = [
   {
     id: 'cloud',
     icon: 'Cloud',
-    skills: ['AWS', 'AWS Amplify', 'GitHub Actions'],
+    skills: ['GitHub Actions'],
   },
   {
     id: 'databases',

@@ -16,7 +16,7 @@
   "about": {
     "title": "Sobre mim",
     "bio1": "Sou desenvolvedor fullstack com mais de 6 anos de experiência. Por mais de 5 anos trabalhei na Waac (Compare Planos de Saúde), desenvolvendo sistemas internos de CRM para vendas, RH e financeiro, e sites de captação de leads no setor de planos de saúde.",
-    "bio2": "Tenho expertise em TypeScript/JavaScript em todas as camadas: APIs REST com Node.js e NestJS, frontends modernos com React e Next.js e apps mobile com React Native. Também trabalho com mensageria (Kafka) e cloud (AWS).",
+    "bio2": "Tenho expertise em TypeScript/JavaScript em todas as camadas: APIs REST com Node.js e NestJS, frontends modernos com React e Next.js e apps mobile com React Native.",
     "stat_years": "Anos de experiência",
     "stat_projects": "Projetos entregues",
     "stat_available_value": "Aberto",
