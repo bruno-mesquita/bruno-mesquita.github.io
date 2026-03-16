@@ -15,11 +15,23 @@
   },
   "about": {
     "title": "Sobre mim",
-    "bio1": "Sou desenvolvedor fullstack com mais de 6 anos de experiência criando produtos digitais robustos e escaláveis. Atualmente trabalho na Waac - Soluções Tecnológicas, em São José dos Campos - SP.",
-    "bio2": "Tenho expertise em TypeScript/JavaScript em todas as camadas da aplicação: APIs REST com Node.js e NestJS, frontends modernos com React e Next.js, e apps mobile com React Native. Também trabalho com mensageria (Kafka) e cloud (AWS).",
+    "bio1": "Sou desenvolvedor fullstack com mais de 6 anos de experiência. Por mais de 5 anos trabalhei na Waac (Compare Planos de Saúde), desenvolvendo sistemas internos de CRM para vendas, RH e financeiro, e sites de captação de leads no setor de planos de saúde.",
+    "bio2": "Tenho expertise em TypeScript/JavaScript em todas as camadas: APIs REST com Node.js e NestJS, frontends modernos com React e Next.js e apps mobile com React Native. Também trabalho com mensageria (Kafka) e cloud (AWS).",
     "stat_years": "Anos de experiência",
     "stat_projects": "Projetos entregues",
-    "stat_company": "Empresa atual"
+    "stat_available_value": "Aberto",
+    "stat_available": "a novas oportunidades",
+    "experience_title": "Experiência",
+    "education_title": "Formação",
+    "present": "Atual",
+    "entrepreneur_title": "Desenvolvedor Independente",
+    "entrepreneur_period": "Ago 2025 – Atual",
+    "entrepreneur_desc": "Desenvolvendo e lançando produtos próprios de ponta a ponta, da ideia ao deploy. Aberto a oportunidades CLT, PJ ou freelance.",
+    "waac_title": "Desenvolvedor Fullstack",
+    "waac_period": "Dez 2019 – Ago 2025",
+    "waac_desc": "Desenvolvimento de sistemas internos de CRM para vendas, RH e financeiro, e sites de captação de leads no setor de planos de saúde (Compare Planos de Saúde).",
+    "unip_course": "Ciência da Computação — incompleto (6 semestres)",
+    "unip_period": "2019 – 2022"
   },
   "skills": {
     "title": "Habilidades",
@@ -48,7 +60,7 @@
   },
   "contact": {
     "title": "Contato",
-    "subtitle": "Disponível para projetos freelance e oportunidades.",
+    "subtitle": "Disponível para oportunidades CLT, PJ ou freelance.",
     "email_label": "Email",
     "linkedin_label": "LinkedIn",
     "whatsapp_label": "WhatsApp",

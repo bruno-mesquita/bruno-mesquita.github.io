@@ -7,7 +7,7 @@ Portfolio pessoal de Bruno Mesquita, publicado via GitHub Pages.
 - **Framework:** Next.js (App Router) + TypeScript
 - **Estilo:** Tailwind CSS + shadcn/ui (componentes em `components/ui/`)
 - **Deploy:** GitHub Pages (static export)
-- **Gerenciador de pacotes:** Yarn
+- **Gerenciador de pacotes:** Bun
 
 ## Estrutura
 
@@ -26,7 +26,7 @@ O `next.config.js` deve manter `output: 'export'` e `ignoreDuringBuilds: true`.
 
 Para buildar:
 ```bash
-yarn build
+bun run build
 ```
 
 ## Sobre o dono
