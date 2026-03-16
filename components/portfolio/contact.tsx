@@ -28,7 +28,7 @@ export function Contact() {
           </a>
 
           <a
-            href="https://linkedin.com/in/brunomesquita196"
+            href="https://www.linkedin.com/in/bruno-s-mesquita/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-6 rounded-xl border border-border bg-card hover:border-accent/50 transition-all text-left group"
@@ -41,7 +41,7 @@ export function Contact() {
             </div>
             <div className="min-w-0">
               <p className="text-xs text-muted-foreground mb-1">{t('linkedin_label')}</p>
-              <p className="text-sm font-medium truncate">linkedin.com/in/brunomesquita196</p>
+              <p className="text-sm font-medium truncate">linkedin.com/in/bruno-s-mesquita</p>
             </div>
           </a>
           <a
