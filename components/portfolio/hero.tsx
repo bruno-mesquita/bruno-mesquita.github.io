@@ -22,7 +22,7 @@ export function Hero() {
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-32 text-center">
         <div className="flex justify-center mb-6">
           <Image
-            src="https://github.com/bruno-mesquita.png"
+            src="/avatar.png"
             alt="Bruno Mesquita"
             width={80}
             height={80}

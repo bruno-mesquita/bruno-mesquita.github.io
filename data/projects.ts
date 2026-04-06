@@ -8,6 +8,7 @@ export type Project = {
   techs: string[]
   category: ProjectCategory
   featured: boolean
+  image?: string
   github: string | null
   live: string | null
   status: ProjectStatus

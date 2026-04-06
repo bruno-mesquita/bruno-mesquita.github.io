@@ -1,11 +1,13 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
 import { projects, type ProjectCategory } from '@/data/projects'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Github, ExternalLink } from 'lucide-react'
+import { TechIcons } from '@/components/ui/tech-icons'
 
 type FilterValue = 'all' | ProjectCategory
 
@@ -57,6 +59,18 @@ export function Projects() {
                 project.featured ? 'sm:col-span-2 lg:col-span-2' : ''
               }`}
             >
+              {project.image && (
+                <div className="relative w-full aspect-video mb-4 rounded-md overflow-hidden bg-muted">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+              )}
+
               <div className="flex flex-wrap gap-2 mb-3">
                 {project.status === 'in-progress' && (
                   <Badge
@@ -91,7 +105,8 @@ export function Projects() {
 
               <div className="flex flex-wrap gap-1.5 mb-4">
                 {project.techs.map((tech) => (
-                  <Badge key={tech} variant="outline" className="text-xs">
+                  <Badge key={tech} variant="outline" className="text-xs flex items-center gap-1">
+                    {TechIcons[tech]}
                     {tech}
                   </Badge>
                 ))}

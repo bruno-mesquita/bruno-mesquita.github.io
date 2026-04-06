@@ -1,4 +1,8 @@
 {
+  "metadata": {
+    "title": "Bruno Mesquita — Fullstack Developer",
+    "description": "Fullstack JS/TS Developer with 6+ years of experience in Node.js, React, React Native and NestJS."
+  },
   "nav": {
     "about": "About",
     "skills": "Skills",

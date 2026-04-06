@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Jost } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
-import { getMessages, setRequestLocale } from 'next-intl/server'
+import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server'
 import { ThemeProvider } from '@/components/providers'
 import { routing } from '@/i18n/routing'
 import '../globals.css'
@@ -16,16 +16,23 @@ const jost = Jost({
   variable: '--font-jost',
 })
 
-export const metadata: Metadata = {
-  title: 'Bruno Mesquita — Fullstack Developer',
-  description:
-    'Desenvolvedor Fullstack JS/TS com 6+ anos de experiência em Node.js, React, React Native e NestJS.',
-  openGraph: {
-    title: 'Bruno Mesquita — Fullstack Developer',
-    description:
-      'Desenvolvedor Fullstack JS/TS com 6+ anos de experiência em Node.js, React, React Native e NestJS.',
-    type: 'website',
-  },
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'metadata' })
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      type: 'website',
+    },
+  }
 }
 
 export function generateStaticParams() {
