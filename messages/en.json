@@ -15,12 +15,14 @@
     "subtitle": "Building digital products with Node.js, React and React Native for 6+ years.",
     "cta_github": "GitHub",
     "cta_linkedin": "LinkedIn",
-    "cta_contact": "Contact"
+    "cta_contact": "Contact",
+    "cta_cv": "Download CV"
   },
   "about": {
     "title": "About me",
-    "bio1": "I'm a fullstack developer with 6+ years of experience. For over 5 years I worked at Waac (Compare Planos de Saúde), developing internal CRM systems for sales, HR and finance departments, and lead-generation websites for the health insurance sector.",
-    "bio2": "I have expertise in TypeScript/JavaScript across all layers: REST APIs with Node.js and NestJS, frontends with React and Next.js, and mobile apps with React Native.",
+    "bio1": "I'm a developer who enjoys building complete products — from the database to the mobile screen. Over 6 years I've worked across the full stack: backend APIs, web frontends and mobile apps, mostly in the B2B SaaS space. I like when the code I ship actually solves a real problem for real people.",
+    "bio2": "Most of my career was spent at Waac (Compare Planos de Saúde), where I built and maintained internal CRM tools used by 100+ people across sales, HR and finance, as well as lead-generation sites in the health insurance market. Since mid-2025 I've been building my own products independently.",
+    "bio3": "I thrive working close to the product — understanding why something is built matters as much to me as how it's built. I'm at my best on small, high-trust teams where I can contribute across the stack.",
     "stat_years": "Years of experience",
     "stat_projects": "Projects delivered",
     "stat_available_value": "Open",
@@ -30,12 +32,13 @@
     "present": "Present",
     "entrepreneur_title": "Independent Developer",
     "entrepreneur_period": "Aug 2025 – Present",
-    "entrepreneur_desc": "Building and launching own products end-to-end, from idea to deployment. Open to CLT, PJ or freelance opportunities.",
+    "entrepreneur_desc": "Building and launching own products end-to-end — from idea to deployment. Open to CLT, PJ or freelance opportunities.",
     "waac_title": "Fullstack Developer",
     "waac_period": "Dec 2019 – Aug 2025",
-    "waac_desc": "Developed internal CRM systems for sales, HR and finance departments, and lead-generation websites for the health insurance sector (Compare Planos de Saúde).",
-    "unip_course": "Computer Science — incomplete (6 semesters)",
-    "unip_period": "2019 – 2022"
+    "waac_desc": "Led fullstack development of internal CRM systems used daily by 100+ people across sales, HR and finance at Waac (Compare Planos de Saúde). Built and maintained lead-generation websites for the health insurance sector. Worked on a team of 3 developers, delivering 5+ internal products over 5 years.",
+    "unip_course": "Computer Science — 6 semesters",
+    "unip_period": "2019 – 2022",
+    "unip_note": "Left due to personal reasons"
   },
   "skills": {
     "title": "Skills",

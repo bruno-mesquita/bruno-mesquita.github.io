@@ -18,6 +18,7 @@ export function About() {
           <div className="space-y-4">
             <p className="text-muted-foreground leading-relaxed">{t('bio1')}</p>
             <p className="text-muted-foreground leading-relaxed">{t('bio2')}</p>
+            <p className="text-muted-foreground leading-relaxed">{t('bio3')}</p>
           </div>
 
           <div className="grid grid-cols-1 gap-4">
@@ -59,9 +60,9 @@ export function About() {
           <div>
             <h3 className="text-xl font-semibold mb-6">{t('education_title')}</h3>
             <div className="pl-4 border-l-2 border-border">
-              <div className="font-medium">Unip</div>
+              <div className="text-sm font-medium text-muted-foreground">Unip</div>
               <div className="text-sm text-muted-foreground mt-0.5">{t('unip_course')}</div>
-              <div className="text-sm text-muted-foreground">{t('unip_period')}</div>
+              <div className="text-xs text-muted-foreground/60 mt-0.5">{t('unip_period')} · {t('unip_note')}</div>
             </div>
           </div>
         </div>

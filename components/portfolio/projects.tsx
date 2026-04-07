@@ -95,7 +95,7 @@ export function Projects() {
 
               {project.highlight && (
                 <p className="text-xs font-mono mb-3" style={{ color: 'var(--color-accent)' }}>
-                  {project.highlight}
+                  {project.highlight[locale]}
                 </p>
               )}
 

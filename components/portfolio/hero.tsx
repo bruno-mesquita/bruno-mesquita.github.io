@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Github, Linkedin, Mail, FileDown } from 'lucide-react'
 
 export function Hero() {
   const t = useTranslations('hero')
@@ -64,6 +64,14 @@ export function Hero() {
             >
               <Linkedin className="mr-2 h-4 w-4" />
               {t('cta_linkedin')}
+            </a>
+          </Button>
+
+          {/* Place your CV at public/cv.pdf to enable this download */}
+          <Button asChild size="lg" variant="outline">
+            <a href="/cv.pdf" download>
+              <FileDown className="mr-2 h-4 w-4" />
+              {t('cta_cv')}
             </a>
           </Button>
 
