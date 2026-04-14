@@ -8,6 +8,7 @@ import {
 } from 'next-intl/server';
 import { ThemeProvider } from '@/components/providers';
 import { routing } from '@/i18n/routing';
+import { Navbar } from '@/components/portfolio/navbar';
 import '../globals.css';
 
 const inter = Inter({
@@ -67,6 +68,7 @@ export default async function LocaleLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
+            <Navbar />
             {children}
           </NextIntlClientProvider>
         </ThemeProvider>

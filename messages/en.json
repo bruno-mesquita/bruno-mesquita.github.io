@@ -7,7 +7,8 @@
     "about": "About",
     "skills": "Skills",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "blog": "Blog"
   },
   "hero": {
     "greeting": "Hi, I'm",
@@ -72,5 +73,15 @@
     "linkedin_label": "LinkedIn",
     "whatsapp_label": "WhatsApp",
     "location": "São José dos Campos - SP, Brazil"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Thoughts on software development, projects and my journey as a developer.",
+    "noPosts": "No posts yet."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist.",
+    "goHome": "Go to home"
   }
 }

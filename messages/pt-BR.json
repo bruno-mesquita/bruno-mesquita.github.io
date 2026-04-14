@@ -7,7 +7,8 @@
     "about": "Sobre",
     "skills": "Habilidades",
     "projects": "Projetos",
-    "contact": "Contato"
+    "contact": "Contato",
+    "blog": "Blog"
   },
   "hero": {
     "greeting": "Olá, sou",
@@ -72,5 +73,15 @@
     "linkedin_label": "LinkedIn",
     "whatsapp_label": "WhatsApp",
     "location": "São José dos Campos - SP, Brasil"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Pensamentos sobre desenvolvimento de software, projetos e minha jornada como desenvolvedor.",
+    "noPosts": "Nenhum post ainda."
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "description": "A página que você está procurando não existe.",
+    "goHome": "Voltar para home"
   }
 }
