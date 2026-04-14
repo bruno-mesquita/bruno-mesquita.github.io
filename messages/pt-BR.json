@@ -79,6 +79,9 @@
     "description": "Pensamentos sobre desenvolvimento de software, projetos e minha jornada como desenvolvedor.",
     "noPosts": "Nenhum post ainda."
   },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  },
   "notFound": {
     "title": "Página não encontrada",
     "description": "A página que você está procurando não existe.",

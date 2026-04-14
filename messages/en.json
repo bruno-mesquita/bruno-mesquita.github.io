@@ -79,6 +79,9 @@
     "description": "Thoughts on software development, projects and my journey as a developer.",
     "noPosts": "No posts yet."
   },
+  "footer": {
+    "rights": "All rights reserved."
+  },
   "notFound": {
     "title": "Page not found",
     "description": "The page you're looking for doesn't exist.",

@@ -9,6 +9,7 @@ import {
 import { ThemeProvider } from '@/components/providers';
 import { routing } from '@/i18n/routing';
 import { Navbar } from '@/components/portfolio/navbar';
+import { Footer } from '@/components/portfolio/footer';
 import '../globals.css';
 
 const inter = Inter({
@@ -70,6 +71,7 @@ export default async function LocaleLayout({
           <NextIntlClientProvider messages={messages}>
             <Navbar />
             {children}
+            <Footer />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
