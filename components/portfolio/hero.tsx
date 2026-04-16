@@ -112,10 +112,6 @@ export function Hero() {
               {t('cta_contact')}
             </a>
           </Button>
-
-          <a href="https://www.buymeacoffee.com/bmesquita19" target="_blank" rel="noopener noreferrer">
-            <Image src="/buymeacoffee.svg" alt="Buy me a coffee" width={217} height={60} unoptimized />
-          </a>
         </div>
       </div>
     </section>
