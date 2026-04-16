@@ -13,11 +13,16 @@
   "hero": {
     "greeting": "Hi, I'm",
     "role": "Fullstack JS/TS Developer",
-    "subtitle": "Building digital products with Node.js, React and React Native for 6+ years.",
+    "subtitle": "JavaScript · TypeScript · React · Node.js · React Native",
     "cta_github": "GitHub",
     "cta_linkedin": "LinkedIn",
     "cta_contact": "Contact",
-    "cta_cv": "Download CV"
+    "cta_cv": "Download CV",
+    "exp_label": "Exp.",
+    "exp_value": "6+ years",
+    "loc_label": "Loc.",
+    "loc_value": "SJC — SP, Brazil",
+    "available": "available"
   },
   "about": {
     "title": "About me",
