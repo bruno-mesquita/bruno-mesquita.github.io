@@ -37,24 +37,27 @@ export function Projects() {
       direction="up"
     >
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8">{t('title')}</h2>
+        <div className="mb-10">
+          <p className="font-mono text-[11px] tracking-[0.3em] text-primary/60 uppercase mb-2">
+            // projects
+          </p>
+          <h2 className="font-[family-name:var(--font-jost)] text-4xl md:text-5xl font-black tracking-tight">
+            {t('title')}
+          </h2>
+        </div>
 
         <AnimatedItem delay={100}>
-          <div className="flex flex-wrap gap-2 mb-10">
+          <div className="flex flex-wrap gap-1.5 mb-10">
             {filters.map((f) => (
               <button
                 key={f.value}
                 onClick={() => setFilter(f.value)}
-                className={`text-xs px-3 py-1.5 rounded-full border transition-colors ${
+                className={`font-mono text-[11px] px-3 py-1.5 rounded border tracking-wide uppercase transition-all ${
                   filter === f.value
                     ? 'border-transparent text-white'
-                    : 'border-border text-muted-foreground hover:text-foreground'
+                    : 'border-border text-muted-foreground hover:border-primary/40 hover:text-foreground'
                 }`}
-                style={
-                  filter === f.value
-                    ? { backgroundColor: 'var(--color-accent)' }
-                    : {}
-                }
+                style={filter === f.value ? { backgroundColor: 'var(--color-accent)' } : {}}
               >
                 {f.label}
               </button>
@@ -66,10 +69,13 @@ export function Projects() {
           {filtered.map((project, index) => (
             <AnimatedItem key={project.id} delay={150 + index * 80}>
               <div
-                className={`relative flex flex-col p-6 rounded-xl border border-border bg-card transition-all hover:border-accent/50 ${
+                className={`relative flex flex-col p-6 rounded-xl border border-border bg-card transition-all hover:border-primary/30 ${
                   project.featured ? 'sm:col-span-2 lg:col-span-2' : ''
                 }`}
               >
+                <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-primary/25 rounded-tl-xl pointer-events-none" />
+                <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-primary/25 rounded-br-xl pointer-events-none" />
+
                 {project.image && (
                   <div className="relative w-full aspect-video mb-4 rounded-md overflow-hidden bg-muted">
                     <Image
@@ -86,29 +92,25 @@ export function Projects() {
                   {project.status === 'in-progress' && (
                     <Badge
                       variant="outline"
-                      className="text-xs"
-                      style={{
-                        borderColor: 'var(--color-accent)',
-                        color: 'var(--color-accent)',
-                      }}
+                      className="font-mono text-[10px] tracking-wide"
+                      style={{ borderColor: 'var(--color-accent)', color: 'var(--color-accent)' }}
                     >
                       {t('badge_in_progress')}
                     </Badge>
                   )}
                   {!project.github && (
-                    <Badge variant="secondary" className="text-xs">
+                    <Badge variant="secondary" className="font-mono text-[10px] tracking-wide">
                       {t('badge_private')}
                     </Badge>
                   )}
                 </div>
 
-                <h3 className="text-lg font-bold mb-2">{project.title}</h3>
+                <h3 className="font-[family-name:var(--font-jost)] text-lg font-bold mb-2">
+                  {project.title}
+                </h3>
 
                 {project.highlight && (
-                  <p
-                    className="text-xs font-mono mb-3"
-                    style={{ color: 'var(--color-accent)' }}
-                  >
+                  <p className="font-mono text-xs mb-3" style={{ color: 'var(--color-accent)' }}>
                     {project.highlight[locale]}
                   </p>
                 )}
@@ -119,11 +121,7 @@ export function Projects() {
 
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {project.techs.map((tech) => (
-                    <Badge
-                      key={tech}
-                      variant="outline"
-                      className="text-xs flex items-center gap-1"
-                    >
+                    <Badge key={tech} variant="outline" className="text-xs flex items-center gap-1">
                       {TechIcons[tech]}
                       {tech}
                     </Badge>
@@ -133,22 +131,13 @@ export function Projects() {
                 <div className="flex gap-2">
                   {project.github ? (
                     <Button asChild size="sm" variant="outline">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
                         <Github className="mr-1.5 h-3.5 w-3.5" />
                         {t('btn_code')}
                       </a>
                     </Button>
                   ) : (
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      disabled
-                      title={t('btn_unavailable')}
-                    >
+                    <Button size="sm" variant="outline" disabled title={t('btn_unavailable')}>
                       <Github className="mr-1.5 h-3.5 w-3.5" />
                       {t('btn_code')}
                     </Button>
@@ -158,16 +147,9 @@ export function Projects() {
                     <Button
                       asChild
                       size="sm"
-                      style={{
-                        backgroundColor: 'var(--color-accent)',
-                        color: 'white',
-                      }}
+                      style={{ backgroundColor: 'var(--color-accent)', color: 'white' }}
                     >
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href={project.live} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="mr-1.5 h-3.5 w-3.5" />
                         {t('btn_live')}
                       </a>

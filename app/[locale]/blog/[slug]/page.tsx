@@ -6,6 +6,7 @@ import matter from 'gray-matter';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { useMDXComponents } from '@/mdx-components';
 import { getSlugForLocale } from '@/lib/slug-mapping';
+import rehypePrettyCode from 'rehype-pretty-code';
 
 export async function generateStaticParams() {
   const params = [];
@@ -100,7 +101,24 @@ export default async function BlogPostPage({
       </header>
 
       <div className="prose prose-lg max-w-none dark:prose-invert">
-        <MDXRemote source={post.content} components={components} />
+        <MDXRemote
+          source={post.content}
+          components={components}
+          options={{
+            parseFrontmatter: true,
+            mdxOptions: {
+              rehypePlugins: [
+                [
+                  rehypePrettyCode,
+                  {
+                    theme: 'github-dark',
+                    keepBackground: true,
+                  },
+                ],
+              ],
+            },
+          }}
+        />
       </div>
     </article>
   );

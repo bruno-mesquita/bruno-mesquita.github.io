@@ -10,6 +10,7 @@ import { ThemeProvider } from '@/components/providers';
 import { routing } from '@/i18n/routing';
 import { Navbar } from '@/components/portfolio/navbar';
 import { Footer } from '@/components/portfolio/footer';
+import { Toaster } from '@/components/ui/sonner';
 import '../globals.css';
 
 const inter = Inter({
@@ -72,6 +73,7 @@ export default async function LocaleLayout({
             <Navbar />
             {children}
             <Footer />
+            <Toaster />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

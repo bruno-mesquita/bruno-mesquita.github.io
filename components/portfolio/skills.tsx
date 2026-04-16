@@ -47,31 +47,34 @@ export function Skills() {
   return (
     <AnimatedSection
       id="skills"
-      className="py-24 px-6 bg-muted/30"
+      className="py-24 px-6 bg-muted/20"
       delay={0}
       direction="up"
     >
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12">{t('title')}</h2>
+        <div className="mb-12">
+          <p className="font-mono text-[11px] tracking-[0.3em] text-primary/60 uppercase mb-2">
+            // skills
+          </p>
+          <h2 className="font-[family-name:var(--font-jost)] text-4xl md:text-5xl font-black tracking-tight">
+            {t('title')}
+          </h2>
+        </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {skillCategories.map((category, catIndex) => {
             const primary = category.skills.filter((s) => s.tier === 'primary');
-            const secondary = category.skills.filter(
-              (s) => s.tier === 'secondary'
-            );
-            const familiar = category.skills.filter(
-              (s) => s.tier === 'familiar'
-            );
+            const secondary = category.skills.filter((s) => s.tier === 'secondary');
+            const familiar = category.skills.filter((s) => s.tier === 'familiar');
 
             return (
-              <AnimatedItem key={category.id} delay={catIndex * 100}>
-                <div className="p-6 rounded-lg border border-border bg-card">
+              <AnimatedItem key={category.id} delay={catIndex * 80}>
+                <div className="relative p-5 rounded-lg border border-border bg-card hover:border-primary/30 transition-colors overflow-hidden">
+                  <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-primary/50 to-transparent" />
+
                   <div className="flex items-center gap-2 mb-4">
-                    <span style={{ color: 'var(--color-accent)' }}>
-                      {CategoryIcons[category.icon]}
-                    </span>
-                    <h3 className="text-sm font-semibold">
+                    <span className="text-primary/70">{CategoryIcons[category.icon]}</span>
+                    <h3 className="font-mono text-xs tracking-wide text-muted-foreground uppercase">
                       {t(`categories.${category.id}`)}
                     </h3>
                   </div>

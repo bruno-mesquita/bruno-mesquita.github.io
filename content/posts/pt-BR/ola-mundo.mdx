@@ -1,8 +1,8 @@
 ---
 title: 'Olá Mundo'
 date: '2026-04-14'
-description: 'Bem-vindo ao meu novo blog! Veja o que esperar.'
-tags: ['intro', 'pessoal']
+description: 'Primeiro post do blog! Vamos aprender JavaScript e TypeScript do zero.'
+tags: ['js', 'ts', 'tutorial', 'iniciante']
 ---
 
 Bem-vindo ao meu blog! Este é meu espaço pessoal onde vou compartilhar minhas opiniões sobre desenvolvimento de software, meus projetos e tudo mais.
@@ -23,3 +23,54 @@ Depois de vários anos trabalhando como desenvolvedor fullstack, acumulei muito 
 > "A melhor forma de aprender é ensinar." - Anônimo
 
 Fique ligado para mais posts!
+
+---
+
+# JavaScript e TypeScript: Introdução
+
+JavaScript (JS) é a linguagem de programação mais popular da web. Criada em 1995, ela tornaram possível criar páginas interativas e dinâmicas. Hoje, roda em praticamente qualquer lugar: navegadores, servidores, aplicativos mobile, e até mesmo em dispositivos IoT.
+
+**TypeScript** é JavaScript com tipos. Criada pelo Microsoft, é um superset da linguagem que adiciona tipagem estática opcional. O TypeScript roda em qualquer ambiente que JavaScript roda, pois é compilado (transpilado) para JS puro antes da execução.
+
+## Onde Roda?
+
+- **Navegador** - Chrome, Firefox, Safari (JS nativo)
+- **Node.js** - JavaScript no servidor
+- **Deno** - Runtime moderno criado pelo criador do Node.js
+
+## Hello World em JS Puro
+
+Vamos criar o clássico "Hello World" usando apenas HTML e JavaScript puro. Não precisa de nenhuma ferramenta ou framework!
+
+### Arquivo `index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World</title>
+  </head>
+  <body>
+    <h1 id="mensagem"></h1>
+    <script src="index.js"></script>
+  </body>
+</html>
+```
+
+### Arquivo `index.js`
+
+```javascript
+const elemento = document.getElementById('mensagem');
+elemento.textContent = 'Hello World!';
+console.log('Hello World!');
+```
+
+### Como executar
+
+1. Crie os dois arquivos na mesma pasta
+2. Abra o `index.html` no navegador (duplo clique ou arraste para o Chrome/Firefox)
+3. Veja o resultado!
+
+Simples assim! ✅

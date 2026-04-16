@@ -1,4 +1,5 @@
 import type { MDXComponents } from 'mdx/types';
+import { PreWithCopy } from '@/components/pre-with-copy';
 
 export function useMDXComponents(): MDXComponents {
   return {
@@ -25,15 +26,11 @@ export function useMDXComponents(): MDXComponents {
       </blockquote>
     ),
     code: ({ children }) => (
-      <code className="bg-gray-100 dark:bg-gray-800 rounded px-1.5 py-0.5 text-sm font-mono">
+      <code className="rounded px-1.5 py-0.5 text-sm font-mono">
         {children}
       </code>
     ),
-    pre: ({ children }) => (
-      <pre className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 overflow-x-auto mb-4 font-mono text-sm">
-        {children}
-      </pre>
-    ),
+    pre: PreWithCopy,
     a: ({ children, href }) => (
       <a href={href} className="text-blue-600 hover:underline">
         {children}

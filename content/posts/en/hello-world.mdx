@@ -1,8 +1,8 @@
 ---
 title: 'Hello World'
 date: '2026-04-14'
-description: "Welcome to my new blog! Here's what to expect."
-tags: ['intro', 'personal']
+description: 'First blog post! Let us learn JavaScript and TypeScript from scratch.'
+tags: ['js', 'ts', 'tutorial', 'beginner']
 ---
 
 Welcome to my blog! This is my personal space where I'll be sharing my thoughts on software development, my projects, and everything in between.
@@ -23,3 +23,54 @@ After several years working as a fullstack developer, I've accumulated a lot of 
 > "The best way to learn is to teach." - Anonymous
 
 Stay tuned for more posts!
+
+---
+
+# JavaScript and TypeScript: Introduction
+
+JavaScript (JS) is the most popular programming language on the web. Created in 1995, it made it possible to create interactive and dynamic pages. Today, it runs practically anywhere: browsers, servers, mobile apps, and even IoT devices.
+
+**TypeScript** is JavaScript with types. Created by Microsoft, it's a superset of the language that adds optional static typing. TypeScript runs in any environment JavaScript runs, because it's compiled (transpiled) to plain JS before execution.
+
+## Where Does It Run?
+
+- **Browser** - Chrome, Firefox, Safari (native JS)
+- **Node.js** - JavaScript on the server
+- **Deno** - Modern runtime created by the creator of Node.js
+
+## Hello World in Plain JS
+
+Let's create the classic "Hello World" using only plain HTML and JavaScript. No tools or frameworks needed!
+
+### File `index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World</title>
+  </head>
+  <body>
+    <h1 id="message"></h1>
+    <script src="index.js"></script>
+  </body>
+</html>
+```
+
+### File `index.js`
+
+```javascript
+const element = document.getElementById('message');
+element.textContent = 'Hello World!';
+console.log('Hello World!');
+```
+
+### How to Run
+
+1. Create both files in the same folder
+2. Open `index.html` in your browser (double-click or drag to Chrome/Firefox)
+3. See the result!
+
+Simple as that! ✅
