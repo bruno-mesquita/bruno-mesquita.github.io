@@ -1,37 +1,10 @@
-import { getTranslations } from 'next-intl/server';
-import { routing } from '@/i18n/routing';
+import { getTranslations, getLocale } from 'next-intl/server';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { useMDXComponents } from '@/mdx-components';
-import { getSlugForLocale } from '@/lib/slug-mapping';
 import rehypePrettyCode from 'rehype-pretty-code';
-
-export async function generateStaticParams() {
-  const params = [];
-  const allLocales = ['en', 'pt-BR'] as const;
-
-  for (const locale of routing.locales) {
-    const localeDir = path.join(process.cwd(), 'content/posts', locale);
-    if (!fs.existsSync(localeDir)) continue;
-
-    const files = fs.readdirSync(localeDir).filter((f) => f.endsWith('.mdx'));
-
-    for (const file of files) {
-      const slug = file.replace('.mdx', '');
-
-      const otherLocale = allLocales.find((l) => l !== locale);
-      if (otherLocale) {
-        const translatedSlug = getSlugForLocale(slug, locale, otherLocale);
-        if (!translatedSlug) continue;
-      }
-
-      params.push({ locale, slug });
-    }
-  }
-  return params;
-}
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
 
@@ -61,9 +34,10 @@ function getPost(locale: string, slug: string): PostMeta {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string; slug: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { locale, slug } = await params;
+  const locale = await getLocale();
+  const { slug } = await params;
   const post = getPost(locale, slug);
   return {
     title: post.title,
@@ -74,9 +48,10 @@ export async function generateMetadata({
 export default async function BlogPostPage({
   params,
 }: {
-  params: Promise<{ locale: string; slug: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { locale, slug } = await params;
+  const locale = await getLocale();
+  const { slug } = await params;
   const post = getPost(locale, slug);
   const components = useMDXComponents();
 

@@ -1,27 +1,26 @@
 # Gemini Project Context: Bruno Mesquita Portfolio
 
-This is a personal portfolio website for Bruno Mesquita, a Fullstack Developer. It's built with modern web technologies and optimized for static hosting on GitHub Pages.
+This is a personal portfolio website for Bruno Mesquita, a Fullstack Developer. It's built with modern web technologies and optimized for deployment on Vercel.
 
 ## Project Overview
 
 - **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS 4.x + shadcn/ui
-- **Internationalization:** `next-intl` (English and Portuguese support)
+- **Internationalization:** `next-intl` (English and Portuguese support, cookie-based, no URL prefixes)
 - **Content Management:** MDX for blog posts (`content/posts`) and static TypeScript files for portfolio data (`data/`)
-- **Deployment:** Static export (`output: 'export'`) to GitHub Pages
+- **Deployment:** Vercel (Dynamic rendering)
 
 ## Project Structure
 
-- `app/`: Next.js App Router pages and layouts.
-  - `blog/`: Blog listing and individual post pages.
-  - `[locale]/`: Internationalized routes (if applicable, though current config uses cookies in `i18n/request.ts`).
+- `app/`: Next.js App Router pages and layouts (No `[locale]` segments).
+  - `blog/`: Blog listing and dynamic post pages.
 - `components/`: React components.
   - `portfolio/`: High-level portfolio sections (Hero, About, Projects, etc.).
   - `ui/`: shadcn/ui components (should not be edited manually).
 - `content/`: MDX blog posts organized by locale (`en`, `pt-BR`).
 - `data/`: Static data for projects and skills.
-- `i18n/`: Internationalization configuration and routing.
+- `i18n/`: Internationalization configuration (cookie-based).
 - `lib/`: Utility functions and slug mapping for translated posts.
 - `messages/`: Translation JSON files.
 - `public/`: Static assets like images and PDFs.
@@ -32,7 +31,7 @@ This is a personal portfolio website for Bruno Mesquita, a Fullstack Developer. 
 
 - **Install Dependencies:** `bun install`
 - **Development Server:** `bun run dev`
-- **Build for Production:** `bun run build` (generates static files in `out/`)
+- **Build for Production:** `bun run build`
 - **Linting:** `bun run lint`
 
 ### Adding a Blog Post
@@ -50,10 +49,10 @@ This is a personal portfolio website for Bruno Mesquita, a Fullstack Developer. 
 - **Components:** Use functional components with TypeScript.
 - **Styling:** Use Tailwind CSS utility classes. Prefer CSS variables for theme-consistent colors.
 - **Types:** Strictly type all data structures and component props.
-- **i18n:** Always use the `useTranslations` hook or `getTranslations` server function; do not hardcode text.
+- **i18n:** Use the `useTranslations` (client) or `getTranslations` (server) functions. The locale is automatically resolved by `next-intl` from cookies.
 - **shadcn/ui:** Follow shadcn patterns; if a UI component needs significant changes, consider wrapping it rather than editing the base component in `components/ui/`.
 
 ## Deployment Details
 
-- The project uses `next.config.ts` with `trailingSlash: true` and `images: { unoptimized: true }` to support static export on GitHub Pages.
-- Deployments are likely handled via GitHub Actions (see `.github/workflows/nextjs.yml`).
+- The project is deployed on Vercel.
+- Internationalization is handled without URL prefixes (`/[locale]`) by using the `locale` cookie and `next-intl` configuration.

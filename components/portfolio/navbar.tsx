@@ -17,8 +17,6 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
-  console.log({ locale });
-
   const otherLocale = locale === 'en' ? 'pt-BR' : 'en';
   const otherLocaleLabel = locale === 'en' ? 'PT' : 'EN';
 
@@ -53,7 +51,7 @@ export function Navbar() {
     { href: '#skills', label: t('skills') },
     { href: '#projects', label: t('projects') },
     { href: '#contact', label: t('contact') },
-    { href: `/${locale}/blog`, label: t('blog'), isPage: true },
+    { href: '/blog', label: t('blog'), isPage: true },
   ];
 
   return (

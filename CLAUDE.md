@@ -1,33 +1,39 @@
 # CLAUDE.md — bruno-mesquita.github.io
 
-Portfolio pessoal de Bruno Mesquita, publicado via GitHub Pages.
+Portfolio pessoal de Bruno Mesquita, publicado via Vercel.
 
 ## Stack
 
 - **Framework:** Next.js (App Router) + TypeScript
-- **Estilo:** Tailwind CSS + shadcn/ui (componentes em `components/ui/`)
-- **Deploy:** GitHub Pages (static export)
+- **Estilo:** Tailwind CSS 4 + shadcn/ui (componentes em `components/ui/`)
+- **Deploy:** Vercel (SSR/Dynamic rendering)
 - **Gerenciador de pacotes:** Bun
+- **Internacionalização:** next-intl (cookie-based, sem prefixo de locale na URL)
 
 ## Estrutura
 
 ```
-app/           → página principal (App Router)
+app/           → páginas do site (sem [locale])
 components/    → componentes do portfólio
   ui/          → componentes shadcn/ui (não editar manualmente)
 lib/           → utilitários
 public/        → assets estáticos
+content/       → blog posts em MDX (en/pt-BR)
+```
+
+## Comandos
+
+```bash
+bun install    # Instalar dependências
+bun run dev    # Rodar servidor de desenvolvimento
+bun run build  # Buildar para produção (Vercel)
+bun run lint   # Rodar lint
 ```
 
 ## Deploy
 
-O site é publicado via GitHub Pages como export estático do Next.js.
-O `next.config.js` deve manter `output: 'export'` e `ignoreDuringBuilds: true`.
+O site é publicado via Vercel. A internacionalização é gerida via cookies (`next-intl`), permitindo rotas limpas sem `/en` ou `/pt-BR`.
 
-Para buildar:
-```bash
-bun run build
-```
 
 ## Sobre o dono
 
@@ -57,22 +63,3 @@ bun run build
 | kafka-example | JavaScript | Demo de mensageria com Kafka |
 | waac-triangulos (backend + frontend) | JavaScript | Projeto real da empresa Waac |
 | GoBarber-backend | JavaScript | App de barbearia (bootcamp Rocketseat) |
-
-## Decisões e contexto
-
-- O portfólio estava desatualizado há ~3 anos com conteúdo placeholder
-- Decidimos ATUALIZAR o projeto existente (não reescrever do zero) — a stack Next.js + TS + Tailwind + shadcn ainda é válida
-- Foco: conteúdo real, design mais profissional, seções completas
-- Idioma do site: decidir com Bruno (PT-BR ou EN)
-- Next.js pode ser atualizado de 13 → 14/15 se necessário
-
-## O que precisa ser feito
-
-- [ ] Atualizar a bio com conteúdo real e profissional
-- [ ] Seção de projetos com dados reais dos repos
-- [ ] Seção de tecnologias preenchida
-- [ ] Links funcionais (WhatsApp, email, GitHub, LinkedIn)
-- [ ] Foto/avatar real
-- [ ] Considerar upgrade do Next.js 13 → 15
-- [ ] Responsividade mobile
-- [ ] SEO básico (meta tags, og:image)

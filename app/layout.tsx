@@ -3,7 +3,7 @@ import { Inter, Jost } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import {
   getMessages,
-  setRequestLocale,
+  getLocale,
   getTranslations,
 } from 'next-intl/server';
 import { ThemeProvider } from '@/components/providers';
@@ -22,13 +22,8 @@ const jost = Jost({
   variable: '--font-jost',
 });
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'metadata' });
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations({ namespace: 'metadata' });
 
   return {
     title: t('title'),
@@ -43,13 +38,10 @@ export async function generateMetadata({
 
 export default async function LocaleLayout({
   children,
-  params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  setRequestLocale(locale);
+  const locale = await getLocale();
   const messages = await getMessages();
   return (
     <html

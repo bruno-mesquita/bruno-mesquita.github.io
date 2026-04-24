@@ -1,13 +1,8 @@
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, getLocale } from 'next-intl/server';
 import Link from 'next/link';
-import { routing } from '@/i18n/routing';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
-}
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
 
@@ -37,13 +32,9 @@ function getPostsByLocale(locale: string): PostMeta[] {
   });
 }
 
-export default async function BlogPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'blog' });
+export default async function BlogPage() {
+  const locale = await getLocale();
+  const t = await getTranslations({ namespace: 'blog' });
   const posts = getPostsByLocale(locale).sort((a, b) =>
     a.date > b.date ? -1 : 1
   );
@@ -65,7 +56,7 @@ export default async function BlogPage({
                 </>
               )}
             </div>
-            <Link href={`/${locale}/blog/${post.slug}`}>
+            <Link href={`/blog/${post.slug}`}>
               <h2 className="text-2xl font-semibold hover:text-primary transition-colors">
                 {post.title}
               </h2>
