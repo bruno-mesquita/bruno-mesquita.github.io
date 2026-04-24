@@ -23,7 +23,8 @@ const jost = Jost({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations({ namespace: 'metadata' });
+  const locale = await getLocale();
+  const t = await getTranslations({ locale, namespace: 'metadata' });
 
   return {
     title: t('title'),

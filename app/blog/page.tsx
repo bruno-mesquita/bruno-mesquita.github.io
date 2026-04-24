@@ -34,7 +34,7 @@ function getPostsByLocale(locale: string): PostMeta[] {
 
 export default async function BlogPage() {
   const locale = await getLocale();
-  const t = await getTranslations({ namespace: 'blog' });
+  const t = await getTranslations({ locale, namespace: 'blog' });
   const posts = getPostsByLocale(locale).sort((a, b) =>
     a.date > b.date ? -1 : 1
   );
