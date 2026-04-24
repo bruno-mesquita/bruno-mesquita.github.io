@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -15,26 +15,13 @@ export function Footer() {
 
         <div className="flex items-center gap-4">
           <a
-            href="https://www.buymeacoffee.com/bmesquita19"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/buymeacoffee.svg"
-              alt="Buy me a coffee"
-              width={130}
-              height={36}
-              unoptimized
-            />
-          </a>
-          <a
             href="https://github.com/bruno-mesquita"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            <Github className="h-4 w-4" />
+            <FaGithub className="h-4 w-4" />
           </a>
           <a
             href="https://linkedin.com/in/brunomesquita196"
@@ -43,7 +30,7 @@ export function Footer() {
             aria-label="LinkedIn"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            <Linkedin className="h-4 w-4" />
+            <FaLinkedin className="h-4 w-4" />
           </a>
           <a
             href="mailto:bmesquita196@gmail.com"

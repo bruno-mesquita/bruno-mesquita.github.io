@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { CodeEditor } from '@/components/ui/code-editor';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-function getCodeLines(locale: string) {
-  const lines = {
-    en: `// Bruno Mesquita - Fullstack Developer
+function getCodeLines() {
+  return `// Bruno Mesquita - Fullstack Developer
 const brunoMesquita = new Developer({
   name: 'Bruno Mesquita',
   location: 'São José dos Campos - SP',
@@ -19,28 +19,11 @@ const brunoMesquita = new Developer({
     databases: ['PostgreSQL', 'MongoDB'],
   },
   experience: '6+ years',
-});`,
-    'pt-BR': `// Bruno Mesquita - Desenvolvedor Fullstack
-const brunoMesquita = new Developer({
-  name: 'Bruno Mesquita',
-  location: 'São José dos Campos - SP',
-  role: 'Desenvolvedor Fullstack JS/TS',
-  skills: {
-    languages: ['JavaScript', 'TypeScript'],
-    frontend: ['React', 'Next.js', 'TailwindCSS'],
-    backend: ['Node.js', 'Express', 'Fastify', 'Bun', 'Elysia'],
-    mobile: ['React Native (Expo)', 'HeroUI Native', 'NativeWind', 'Uniwind'],
-    databases: ['PostgreSQL', 'MongoDB'],
-  },
-  experience: '6+ anos',
-});`,
-  };
-  return lines[locale as keyof typeof lines] || lines.en;
+});`;
 }
 
 export function Hero() {
   const t = useTranslations('hero');
-  const locale = useLocale();
 
   return (
     <section
@@ -141,7 +124,7 @@ export function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Github className="mr-2 h-4 w-4" />
+                  <FaGithub className="mr-2 h-4 w-4" />
                   {t('cta_github')}
                 </a>
               </Button>
@@ -157,7 +140,7 @@ export function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Linkedin className="mr-2 h-4 w-4" />
+                  <FaLinkedin className="mr-2 h-4 w-4" />
                   {t('cta_linkedin')}
                 </a>
               </Button>
@@ -202,7 +185,7 @@ export function Hero() {
             {/* Code editor — ocupa todo espaço restante */}
             <div className="hero-editor flex-1">
               <CodeEditor
-                code={getCodeLines(locale)}
+                code={getCodeLines()}
                 className="w-full h-full min-h-[23rem] "
               />
             </div>

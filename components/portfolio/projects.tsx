@@ -6,7 +6,9 @@ import { useTranslations, useLocale } from 'next-intl';
 import { projects, type ProjectCategory } from '@/data/projects';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
+
 import { TechIcons } from '@/components/ui/tech-icons';
 import { AnimatedSection, AnimatedItem } from './animated-section';
 
@@ -57,7 +59,11 @@ export function Projects() {
                     ? 'border-transparent text-white'
                     : 'border-border text-muted-foreground hover:border-primary/40 hover:text-foreground'
                 }`}
-                style={filter === f.value ? { backgroundColor: 'var(--color-accent)' } : {}}
+                style={
+                  filter === f.value
+                    ? { backgroundColor: 'var(--color-accent)' }
+                    : {}
+                }
               >
                 {f.label}
               </button>
@@ -93,13 +99,19 @@ export function Projects() {
                     <Badge
                       variant="outline"
                       className="font-mono text-[10px] tracking-wide"
-                      style={{ borderColor: 'var(--color-accent)', color: 'var(--color-accent)' }}
+                      style={{
+                        borderColor: 'var(--color-accent)',
+                        color: 'var(--color-accent)',
+                      }}
                     >
                       {t('badge_in_progress')}
                     </Badge>
                   )}
                   {!project.github && (
-                    <Badge variant="secondary" className="font-mono text-[10px] tracking-wide">
+                    <Badge
+                      variant="secondary"
+                      className="font-mono text-[10px] tracking-wide"
+                    >
                       {t('badge_private')}
                     </Badge>
                   )}
@@ -110,7 +122,10 @@ export function Projects() {
                 </h3>
 
                 {project.highlight && (
-                  <p className="font-mono text-xs mb-3" style={{ color: 'var(--color-accent)' }}>
+                  <p
+                    className="font-mono text-xs mb-3"
+                    style={{ color: 'var(--color-accent)' }}
+                  >
                     {project.highlight[locale]}
                   </p>
                 )}
@@ -121,7 +136,11 @@ export function Projects() {
 
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {project.techs.map((tech) => (
-                    <Badge key={tech} variant="outline" className="text-xs flex items-center gap-1">
+                    <Badge
+                      key={tech}
+                      variant="outline"
+                      className="text-xs flex items-center gap-1"
+                    >
                       {TechIcons[tech]}
                       {tech}
                     </Badge>
@@ -131,14 +150,23 @@ export function Projects() {
                 <div className="flex gap-2">
                   {project.github ? (
                     <Button asChild size="sm" variant="outline">
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="mr-1.5 h-3.5 w-3.5" />
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaGithub className="mr-1.5 h-3.5 w-3.5" />
                         {t('btn_code')}
                       </a>
                     </Button>
                   ) : (
-                    <Button size="sm" variant="outline" disabled title={t('btn_unavailable')}>
-                      <Github className="mr-1.5 h-3.5 w-3.5" />
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      disabled
+                      title={t('btn_unavailable')}
+                    >
+                      <FaGithub className="mr-1.5 h-3.5 w-3.5" />
                       {t('btn_code')}
                     </Button>
                   )}
@@ -147,9 +175,16 @@ export function Projects() {
                     <Button
                       asChild
                       size="sm"
-                      style={{ backgroundColor: 'var(--color-accent)', color: 'white' }}
+                      style={{
+                        backgroundColor: 'var(--color-accent)',
+                        color: 'white',
+                      }}
                     >
-                      <a href={project.live} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <ExternalLink className="mr-1.5 h-3.5 w-3.5" />
                         {t('btn_live')}
                       </a>

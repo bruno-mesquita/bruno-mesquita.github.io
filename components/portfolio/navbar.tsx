@@ -3,50 +3,28 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
-import { usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
 import { Moon, Sun, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { getSlugForLocale } from '@/lib/slug-mapping';
+import { setLocale } from '@/actions/cookies';
 
 export function Navbar() {
   const t = useTranslations('nav');
   const locale = useLocale();
-  const pathname = usePathname();
   const { theme, setTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
+  console.log({ locale });
+
   const otherLocale = locale === 'en' ? 'pt-BR' : 'en';
   const otherLocaleLabel = locale === 'en' ? 'PT' : 'EN';
 
-  function getTargetPath(): string {
-    const pathParts = pathname.split('/').filter(Boolean);
-    const currentPathLocale = pathParts[0];
-    const remainingPath = pathParts.slice(1);
-
-    if (remainingPath[0] === 'blog' && remainingPath[1]) {
-      const currentSlug = remainingPath[1];
-      const translatedSlug = getSlugForLocale(
-        currentSlug,
-        currentPathLocale,
-        otherLocale
-      );
-      if (translatedSlug) {
-        return `/${otherLocale}/blog/${translatedSlug}`;
-      }
-    }
-
-    if (remainingPath[0] === 'blog') {
-      return `/${otherLocale}/blog`;
-    }
-
-    return `/${otherLocale}`;
+  function switchLocale() {
+    setLocale(otherLocale);
   }
-
-  const targetPath = getTargetPath();
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 50);
@@ -134,12 +112,13 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link
-            href={targetPath}
+          <button
+            type="button"
+            onClick={switchLocale}
             className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors px-2 py-1"
           >
             {otherLocaleLabel}
-          </Link>
+          </button>
 
           <Button
             variant="ghost"

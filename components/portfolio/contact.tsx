@@ -1,5 +1,7 @@
 import { useTranslations } from 'next-intl';
-import { Mail, Linkedin, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
+import { FaLinkedin } from 'react-icons/fa';
+
 import { AnimatedSection, AnimatedItem } from './animated-section';
 
 export function Contact() {
@@ -37,7 +39,9 @@ export function Contact() {
                 <p className="font-mono text-[10px] text-muted-foreground tracking-widest uppercase mb-1">
                   {t('email_label')}
                 </p>
-                <p className="text-sm font-medium truncate">bmesquita196@gmail.com</p>
+                <p className="text-sm font-medium truncate">
+                  bmesquita196@gmail.com
+                </p>
               </div>
             </a>
           </AnimatedItem>
@@ -51,7 +55,7 @@ export function Contact() {
             >
               <div className="absolute top-0 left-0 w-5 h-5 border-t border-l border-primary/30 rounded-tl-lg pointer-events-none" />
               <div className="p-2.5 rounded-md bg-primary/10 flex-shrink-0">
-                <Linkedin className="h-4 w-4 text-primary" />
+                <FaLinkedin className="h-4 w-4 text-primary" />
               </div>
               <div className="min-w-0">
                 <p className="font-mono text-[10px] text-muted-foreground tracking-widest uppercase mb-1">
@@ -84,7 +88,9 @@ export function Contact() {
                 <p className="font-mono text-[10px] text-muted-foreground tracking-widest uppercase mb-1">
                   {t('whatsapp_label')}
                 </p>
-                <p className="text-sm font-medium truncate">+55 (12) 98131-5901</p>
+                <p className="text-sm font-medium truncate">
+                  +55 (12) 98131-5901
+                </p>
               </div>
             </a>
           </AnimatedItem>

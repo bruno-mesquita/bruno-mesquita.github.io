@@ -1,10 +1,19 @@
-export default function RootPage() {
+'use client';
+
+import { Hero } from '@/components/portfolio/hero';
+import { About } from '@/components/portfolio/about';
+import { Skills } from '@/components/portfolio/skills';
+import { Projects } from '@/components/portfolio/projects';
+import { Contact } from '@/components/portfolio/contact';
+
+export default function HomePage() {
   return (
-    <html lang="pt-BR">
-      <head>
-        <meta httpEquiv="refresh" content="0;url=/pt-BR/" />
-      </head>
-      <body />
-    </html>
+    <main>
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+    </main>
   );
 }
