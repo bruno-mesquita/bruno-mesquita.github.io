@@ -136,7 +136,7 @@ export function Hero() {
                 className="w-full justify-start"
               >
                 <a
-                  href="https://linkedin.com/in/brunomesquita196"
+                  href="https://www.linkedin.com/in/bruno-s-mesquita"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
