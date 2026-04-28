@@ -24,7 +24,7 @@ export function Footer() {
             <FaGithub className="h-4 w-4" />
           </a>
           <a
-            href="https://linkedin.com/in/brunomesquita196"
+            href="https://www.linkedin.com/in/bruno-s-mesquita"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
