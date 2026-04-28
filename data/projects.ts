@@ -37,7 +37,7 @@ export const projects: Project[] = [
     category: 'marketplace',
     featured: true,
     github: null,
-    live: null,
+    live: 'https://temquemfaca.com.br',
     status: 'in-progress',
   },
   {
@@ -72,10 +72,10 @@ export const projects: Project[] = [
       'pt-BR': 'App de serviços municipais',
     },
     techs: ['TypeScript', 'React Native', 'Node.js'],
-    category: 'mobile',
+    category: 'fullstack',
     featured: false,
     github: null,
-    live: null,
+    live: 'https://peruibefacil.com.br/',
     status: 'completed',
   },
   {
