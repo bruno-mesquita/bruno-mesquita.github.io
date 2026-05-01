@@ -1,15 +1,13 @@
 import type { Metadata } from 'next';
 import { Inter, Jost } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
-import {
-  getMessages,
-  getLocale,
-  getTranslations,
-} from 'next-intl/server';
+import { getMessages, getLocale, getTranslations } from 'next-intl/server';
 import { ThemeProvider } from '@/components/providers';
 import { Navbar } from '@/components/portfolio/navbar';
 import { Footer } from '@/components/portfolio/footer';
 import { Toaster } from '@/components/ui/sonner';
+import { Analytics } from '@vercel/analytics/next';
+
 import './globals.css';
 
 const inter = Inter({
@@ -64,6 +62,7 @@ export default async function LocaleLayout({
             <Toaster />
           </NextIntlClientProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
