@@ -18,6 +18,7 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'TypeScript', tier: 'primary' },
       { name: 'JavaScript', tier: 'primary' },
+      { name: 'C#', tier: 'familiar' },
     ],
   },
   {
