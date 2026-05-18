@@ -26,11 +26,11 @@ export const skillCategories: SkillCategory[] = [
     icon: 'Server',
     skills: [
       { name: 'Node.js', tier: 'primary' },
-      { name: 'NestJS', tier: 'primary' },
       { name: 'REST API', tier: 'primary' },
+      { name: 'Elysia', tier: 'secondary' },
       { name: 'Express', tier: 'secondary' },
-      { name: 'Deno', tier: 'familiar' },
-      { name: 'Fresh', tier: 'familiar' },
+      { name: 'tRPC', tier: 'secondary' },
+      { name: 'Fastify', tier: 'secondary' },
     ],
   },
   {
@@ -55,7 +55,6 @@ export const skillCategories: SkillCategory[] = [
     id: 'cloud',
     icon: 'Cloud',
     skills: [
-      { name: 'AWS', tier: 'secondary' },
       { name: 'Docker', tier: 'secondary' },
       { name: 'GitHub Actions', tier: 'secondary' },
     ],
