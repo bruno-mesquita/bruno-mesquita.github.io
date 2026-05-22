@@ -97,4 +97,23 @@ export const projects: Project[] = [
     live: 'https://dispatchly-web.vercel.app/',
     status: 'in-progress',
   },
+  {
+    id: 'core-ledger',
+    title: 'CoreLedger',
+    description: {
+      en: 'Modular banking platform built with Clean Architecture, CQRS and DDD to learn C# and .NET.',
+      'pt-BR':
+        'Plataforma bancária modular com Clean Architecture, CQRS e DDD para aprender C# e .NET.',
+    },
+    highlight: {
+      en: 'C# learning project with real banking features',
+      'pt-BR': 'Projeto de aprendizado em C# com funcionalidades bancárias reais',
+    },
+    techs: ['C#', '.NET', 'Entity Framework', 'PostgreSQL', 'Next.js', 'Docker'],
+    category: 'fullstack',
+    featured: false,
+    github: 'https://github.com/bruno-mesquita/core-ledger',
+    live: null,
+    status: 'in-progress',
+  },
 ];

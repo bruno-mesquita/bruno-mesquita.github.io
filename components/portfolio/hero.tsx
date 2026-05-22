@@ -12,9 +12,9 @@ const brunoMesquita = new Developer({
   location: 'São José dos Campos - SP',
   role: 'Fullstack JS/TS Developer',
   skills: {
-    languages: ['JavaScript', 'TypeScript'],
+    languages: ['JavaScript', 'TypeScript', 'C#'],
     frontend: ['React', 'Next.js', 'TailwindCSS'],
-    backend: ['Node.js', 'Express', 'Fastify', 'Bun', 'Elysia'],
+    backend: ['Node.js', 'Express', 'Fastify', 'Bun', 'Elysia', '.NET'],
     mobile: ['React Native (Expo)', 'HeroUI Native', 'NativeWind', 'Uniwind'],
     databases: ['PostgreSQL', 'MongoDB'],
   },

@@ -18,7 +18,7 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'TypeScript', tier: 'primary' },
       { name: 'JavaScript', tier: 'primary' },
-      { name: 'C#', tier: 'familiar' },
+      { name: 'C#', tier: 'secondary' },
     ],
   },
   {
@@ -31,6 +31,8 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Express', tier: 'secondary' },
       { name: 'tRPC', tier: 'secondary' },
       { name: 'Fastify', tier: 'secondary' },
+      { name: '.NET', tier: 'secondary' },
+      { name: 'Entity Framework', tier: 'secondary' },
     ],
   },
   {
